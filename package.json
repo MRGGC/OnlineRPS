@@ -1,0 +1,20 @@
+{
+  "name": "online_rps",
+  "version": "0.0.1",
+  "description": "Online Rock Paper Sissors",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rock",
+    "paper",
+    "sissors"
+  ],
+  "author": "GGC_",
+  "license": "MIT",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4"
+  }
+}
