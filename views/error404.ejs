@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>ERROR</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style media="screen">
+
+            body {
+                background: #0000aa;
+                color: #ffffff;
+                font-family: courier;
+                font-size: 12pt;
+                text-align: center;
+                margin: 10vw;
+            }
+
+            blink {
+                color: yellow;
+            }
+
+            .neg {
+                background: #fff;
+                color: #0000aa;
+                padding: 2px 8px;
+                font-weight: bold;
+            }
+
+            p {
+                margin: 30px 10vw;
+                text-align: left;
+            }
+
+            a, a: hover {
+                color: inherit;
+                font: inherit;
+            }
+
+            .menu {
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            #blinking {
+                animation: blink 0.8s ease-out infinite;
+            }
+
+            @keyframes blink {
+                0% {
+                    opacity: 1;
+                }
+
+                50% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            @-webkit-keyframes blink {
+                0% {
+                    opacity: 1;
+                }
+
+                50% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <code>
+            <span class="neg">ERROR 404</span>
+            <p>
+            The page is missing or never was written. You can wait and<br />
+            see if it becomes available again, or you can restart your computer.
+            </p>
+            <p>
+            * Send us an e-mail to notify this and try it later.<br />
+
+            * Press CTRL+ALT+DEL to restart your computer. You will<br />
+             &nbsp; lose unsaved information in any programs that are running.
+            </p>
+            Press any link to continue <span id="blinking">_</span>
+
+            <div class="menu">
+                <a href="/">M E N U</a>
+            </div>
+        </code>
+    </body>
+</html>

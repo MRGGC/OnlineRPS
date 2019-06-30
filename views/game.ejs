@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Rock Paper Scissors</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="/assets/css/game.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+        <script src="/assets/js/jquery.js" charset="utf-8"></script>
+    </head>
+    <body>
+
+        <div class="header">
+            <h1>Rock Paper Scissors</h1>
+        </div>
+
+        <div class="score-board">
+            <div id="user-label" class="badge">you</div>
+            <div id="opponent-label" class="badge">opponent</div>
+            <span id="user-score"></span> : <span id="opponent-score"></span>
+        </div>
+
+        <center><div class="game">
+
+            <div class="icons">
+
+                <img src="/assets/icons/rock.svg" alt="ROCK" onclick="makeMove(0)" id="figure0">
+                <img src="/assets/icons/paper.svg" alt="PAPER" onclick="makeMove(1)" id="figure1">
+                <img src="/assets/icons/scissors.svg" alt="SCISSORS" onclick="makeMove(2)" id="figure2">
+
+            </div>
+
+            <br>
+
+            <p id="moveTxt">Make your move</p>
+
+        </div></center>
+
+        <script type="text/javascript">
+            // Connection / Joining to the socket server
+            const serverHostname = window.location.protocol + "//" + window.location.hostname + ":" + location.port;
+            const socket = io.connect(serverHostname);
+            const room = `<%= room %>`;
+            const lastRoom = `<%= lastRoom %>`;
+
+            socket.emit('joinRoom', room, lastRoom);
+
+            const disconnect = () => socket.emit('disconnecting', room);
+
+            window.onbeforeunload = disconnect;
+
+        </script>
+        <script src="/assets/js/main.js" charset="utf-8"></script>
+
+    </body>
+</html>

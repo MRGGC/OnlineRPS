@@ -1,0 +1,89 @@
+body, html {
+    background-color: rgb(166, 188, 82);
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #1d80d6; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #1d80d6 0%, #05306d 34%, #05306d 70%, #1d80d6 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #1d80d6 0%,#05306d 34%,#05306d 70%,#1d80d6 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #1d80d6 0%,#05306d 34%,#05306d 70%,#1d80d6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d80d6', endColorstr='#1d80d6',GradientType=1 );
+}
+
+.joinForm {
+    padding: 15px;
+    width: 32%;
+    max-height: 150px;
+    min-width: 350px;
+    position:absolute;
+    left:0; right:0;
+    top:0; bottom:0;
+    margin:auto;
+}
+
+.joinForm > .joinInput {
+    height: 40px;
+    float: left;
+    width: 70%;
+}
+
+.joinForm > .joinBtn {
+    height: 40px;
+    float: right;
+    width: 30%;
+}
+
+.joinForm > .joinLastBtn {
+    width: 100%;
+}
+
+#background {
+
+}
+
+#iconCanvas {
+    z-index: -1;
+    background-color: black;
+    width: 98vw;
+    height: 98vh;
+}
+
+.icon {
+    position: absolute;
+}
+
+.rotated {
+    animation: rotateIcon 1.6s ease-out;
+    -webkit-animation: rotateIcon 1.6s ease-out;
+    -moz-animation: rotateIcon 1.6s ease-out;
+}
+
+@-webkit-keyframes rotateIcon {
+    0% {
+        -webkit-ransform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotateIcon {
+    0% {
+        -moz-ransform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
